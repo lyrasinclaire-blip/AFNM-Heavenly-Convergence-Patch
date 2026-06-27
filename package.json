@@ -1,0 +1,51 @@
+{
+  "name": "heavenly-convergence-compat-patch",
+  "version": "0.1.0",
+  "description": "Compatibility patch for Incandescent Nexus' Heavenly Convergence condensation art.",
+  "author": {
+    "name": "your-name"
+  },
+  "gameVersion": "0.6.54",
+  "packageManager": "bun@1.3.11",
+  "afnmWorkshop": {
+    "workshopId": "",
+    "title": "Heavenly Convergence Compatibility Patch",
+    "tags": [
+      "Gameplay"
+    ],
+    "visibility": "private",
+    "previewImagePath": ""
+  },
+  "main": "mod.js",
+  "scripts": {
+    "extract-translations": "afnm-extract-translations",
+    "prebuild": "node scripts/clean-dist.js && afnm-extract-translations",
+    "typecheck": "tsc --noEmit",
+    "build": "webpack --mode production",
+    "postbuild": "node scripts/copy-translations.js && node scripts/zip-dist.js",
+    "release:validate": "bun run typecheck && bun run build && bun run runtime:oracle",
+    "workshop:upload": "bun run scripts/workshop-upload.ts",
+    "setup": "node scripts/setup.js",
+    "runtime:oracle": "node scripts/installed-game-runtime.js summary",
+    "runtime:extract": "node scripts/installed-game-runtime.js extract",
+    "runtime:grep": "node scripts/installed-game-runtime.js grep"
+  },
+  "devDependencies": {
+    "afnm-types": "0.6.54-3",
+    "prettier": "^3.8.1",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1",
+    "zip-a-folder": "^4.0.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.9",
+    "@mui/material": "^7.3.9",
+    "@reduxjs/toolkit": "^2.11.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

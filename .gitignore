@@ -1,0 +1,18 @@
+node_modules/
+dist/
+builds/
+mods/
+tmp/
+package-lock.json
+settings.json
+*.log
+.env
+.env.*
+!.env.example
+.vera/
+.agent/
+.claude/
+.factory/
+.junie/
+# NOTE: .agents/ is NOT ignored — it is the cross-agent skills directory per agentskills.io
+# Project skills live in .agents/skills/{skill-name}/SKILL.md

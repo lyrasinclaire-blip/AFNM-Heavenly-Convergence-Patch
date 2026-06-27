@@ -1,0 +1,26 @@
+{
+  "arrays": {
+    "src/modContent/heavenlyConvergencePatch": {
+      "[string] Cycle Of Nine Art": "",
+      "[string] Eternal Immolation Art": "",
+      "[string] Mortal Condensation Art": "",
+      "[string] The Distilling Furnace Art": ""
+    }
+  },
+  "buffs": {
+    "src/modContent:heavenlyConvergencePatch": {
+      "[buff/name-resolved] Heavenly Convergence": "",
+      "[name-resolved] Convergent Resonance": ""
+    }
+  },
+  "data": {
+    "src/modContent:heavenlyConvergencePatch": {
+      "[reason] Heavenly Convergence Art is not registered yet": ""
+    }
+  },
+  "items": {
+    "src/modContent:heavenlyConvergencePatch": {
+      "[artName] Heavenly Convergence": ""
+    }
+  }
+}
